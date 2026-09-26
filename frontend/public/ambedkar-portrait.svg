@@ -1,0 +1,28 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2F5C"/>
+      <stop offset="1" stop-color="#1A3A6B"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="71" y1="117" x2="306" y2="381" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD58A"/>
+      <stop offset="1" stop-color="#FF9933"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="500" rx="24" fill="url(#bg)"/>
+  <circle cx="315" cy="72" r="54" fill="#FF9933" fill-opacity="0.14"/>
+  <circle cx="62" cy="440" r="64" fill="#FFFFFF" fill-opacity="0.06"/>
+
+  <rect x="92" y="53" width="216" height="287" rx="108" fill="#D8E7F7" fill-opacity="0.12"/>
+  <path d="M176 118C154.015 118 136 136.015 136 158V179C136 194.464 147.536 206 163 206H237C252.464 206 264 194.464 264 179V158C264 136.015 245.985 118 224 118H176ZM163 241C128.549 241 101 268.549 101 303V334H299V303C299 268.549 271.451 241 237 241H163Z" fill="#F4E4CF"/>
+  <path d="M160 156C160 129.49 181.49 108 208 108H214C240.51 108 262 129.49 262 156V183C262 192.389 254.389 200 245 200H171C161.611 200 154 192.389 154 183V156H160Z" fill="#1A2341"/>
+  <path d="M154 315C154 288.49 176.49 267 203 267H221C247.51 267 270 288.49 270 315V347H154V315Z" fill="url(#gold)"/>
+  <path d="M151 334C161.714 340.968 175.308 345 190.5 345H221.5C241.671 345 259.221 338.972 272 329.155V381H151V334Z" fill="#F4E4CF" fill-opacity="0.4"/>
+  <circle cx="181" cy="162" r="8" fill="#1A2341"/>
+  <circle cx="232" cy="162" r="8" fill="#1A2341"/>
+  <path d="M191 186C198.667 192.667 211.333 192.667 219 186" stroke="#1A2341" stroke-width="7" stroke-linecap="round"/>
+  <path d="M145 116L188 74" stroke="#FF9933" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <path d="M256 74L299 116" stroke="#FF9933" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <text x="200" y="440" text-anchor="middle" fill="#F8F5F0" font-size="30" font-weight="700" font-family="Arial, sans-serif">B. R. Ambedkar</text>
+</svg>

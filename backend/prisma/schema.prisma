@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id         Int       @id @default(autoincrement())
+  name       String
+  place      String
+  district   String
+  state      String
+  email      String
+  phone      String?
+  question   String
+  category   String?
+  status     String    @default("PENDING")
+  createdAt  DateTime  @default(now())
+  responses  Response[]
+  assignedTo Mentor?   @relation(fields: [mentorId], references: [id])
+  mentorId   Int?
+}
+
+model Mentor {
+  id             Int        @id @default(autoincrement())
+  name           String
+  email          String     @unique
+  password       String
+  photo          String?
+  education      String
+  experience     String
+  expertisePath  String
+  expertiseLabel String
+  bio            String?
+  isApproved     Boolean    @default(false)
+  createdAt      DateTime   @default(now())
+  questions      Question[]
+  responses      Response[]
+}
+
+model Response {
+  id         Int      @id @default(autoincrement())
+  content    String
+  isPublic   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  question   Question @relation(fields: [questionId], references: [id])
+  questionId Int
+  mentor     Mentor   @relation(fields: [mentorId], references: [id])
+  mentorId   Int
+}
+
+model Admin {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+}
