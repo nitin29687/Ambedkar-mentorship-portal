@@ -42,8 +42,10 @@ export function initializeStore() {
   }
 
   if (state.admins.length === 0) {
-    const adminPassword = process.env.ADMIN_PASSWORD || 'change_me';
-    const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH || bcrypt.hashSync(adminPassword, 12);
+    const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    const adminPasswordHash = process.env.ADMIN_PASSWORD
+      ? bcrypt.hashSync(process.env.ADMIN_PASSWORD, 12)
+      : (process.env.ADMIN_PASSWORD_HASH || bcrypt.hashSync('admin123', 12));
 
     state.admins.push({
       id: 1,
